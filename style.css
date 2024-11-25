@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Remove as barras de rolagem */
+    height: 100vh; /* Ajusta a altura total para 100% da visualização */
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 800px; /* Limita a largura para telas maiores */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 5px;
+}
+
+.header h2 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.current-number {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.sort-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.sort-button:active {
+    background-color: #0056b3; /* Azul ao pressionar */
+}
+
+.number-list {
+    width: 100%;
+    max-width: 60vw; /* Lista ocupa no máximo 60% da largura da tela */
+    height: 60vh; /* Limita a altura da lista para 60% da altura da tela */
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    grid-template-rows: repeat(15, 1fr); /* 15 linhas, cada coluna com 15 números */
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.number-grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    color: #aaa;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.7rem;
+    padding: 3px;
+    transition: all 0.3s;
+}
+
+.number-grid div.highlighted {
+    background-color: blue;
+    color: yellow;
+    border: 2px solid red;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.order-list-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #d0e7ff;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+    bottom: 0;
+}
+
+.order-list-container h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.order-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+}
+
+.order-list span {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    font-weight: bold;
+}

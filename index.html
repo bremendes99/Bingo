@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Números</h2>
+            <div class="current-number" id="currentNumber">--</div>
+            <button onclick="sortearNumero()" class="sort-button">Sortear Número</button>
+        </div>
+
+        <div class="number-list">
+            <div class="number-grid" id="todosNumeros">
+                <!-- Números de 1 a 75 serão gerados com JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div id="ordemSorteio" class="order-list-container">
+        <h3>Ordem de Sorteio</h3>
+        <div class="order-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
